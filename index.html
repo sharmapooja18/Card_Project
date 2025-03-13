@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Info Card</title>
+    <title>User Information Card</title>
     <style>
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             display: flex;
             justify-content: center;
@@ -24,27 +24,38 @@
         .container {
             background-color: #fff;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            max-width: 400px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            max-width: 450px;
             width: 100%;
             display: none;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
             margin-bottom: 15px;
         }
 
         .field {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
 
-        .label {
-            font-weight: bold;
-        }
+.label {
+    font-weight: bold;
+    width: 40%;
+    text-align: left;
+}
+
+.value {
+    width: 60%;
+    text-align: left;  /* Fix alignment issue */
+}
+
 
         .update-btn {
             display: block;
@@ -57,6 +68,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
 
         .update-btn:hover {
@@ -69,13 +81,13 @@
     <div class="container">
         <h1>User Information Card</h1>
         <div id="user-info">
-            <div class="field"><span class="label">First Name:</span><span id="firstName"></span></div>
-            <div class="field"><span class="label">Last Name:</span><span id="lastName"></span></div>
-            <div class="field"><span class="label">Country:</span><span id="country"></span></div>
-            <div class="field"><span class="label">Phone Number:</span><span id="phoneNumber"></span></div>
-            <div class="field"><span class="label">State:</span><span id="state"></span></div>
-            <div class="field"><span class="label">City:</span><span id="city"></span></div>
-            <div class="field"><span class="label">Village:</span><span id="village"></span></div>
+            <div class="field"><span class="label">First Name:</span><span class="value" id="firstName"></span></div>
+            <div class="field"><span class="label">Last Name:</span><span class="value" id="lastName"></span></div>
+            <div class="field"><span class="label">Country:</span><span class="value" id="country"></span></div>
+            <div class="field"><span class="label">Phone Number:</span><span class="value" id="phoneNumber"></span></div>
+            <div class="field"><span class="label">State:</span><span class="value" id="state"></span></div>
+            <div class="field"><span class="label">City:</span><span class="value" id="city"></span></div>
+            <div class="field"><span class="label">Village:</span><span class="value" id="village"></span></div>
         </div>
         <button class="update-btn" onclick="updateData()">Update Info</button>
     </div>
